@@ -2,8 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 :root {
@@ -20,7 +20,7 @@
 
   /* Fonts */
 
-  --primary-font: "Recursive", sans-serif;
+  --primary-font: "Archivo Black", sans-serif;
   --secondary-font: "Holtwood One SC", serif;
   --accent-font: "Source Serif 4", serif;
   /* Sizing */
@@ -43,21 +43,76 @@ body {
 
 h1 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  font-weight: 800;
   font-family: var(--primary-font);
+  &:hover {
+    opacity: 80%;
+  }
+}
+.about-site {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  margin-bottom: 10px;
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent1-color);
+    &:hover {
+      background-color: var(--accent1-color);
+      color: var(--secondary-color);
+    }
+  }
 }
 
 .sound-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   border: #000000 2px solid;
-  min-height: 450px;
-  min-width: 680px;
-  .play-btn {
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
+  border-radius: 2rem;
+  height: 500px;
+  width: 680px;
+  .play-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    .play-btn {
+      border: none;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      font-size: 2rem;
+      background-color: var(--accent2-color);
+      opacity: 80%;
+      margin-bottom: 1rem;
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+  .music-notes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    height: 150px;
+    gap: 1rem;
+    .note-btn {
+      height: 50px;
+      width: 80px;
+      text-align: center;
+      font-size: 2rem;
+      border: 2px solid var(--primary-color);
+      border-radius: 1rem;
+
+      &:active {
+        background-color: var(--accent2-color);
+        color: var(--secondary-color);
+      }
+    }
   }
 }
 
