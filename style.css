@@ -30,6 +30,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -39,6 +40,27 @@ body {
   background-size: 32px 32px;
   background-color: var(--secondary-color);
 }
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: var(--primary-font);
+}
+
+.sound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #000000 2px solid;
+  min-height: 450px;
+  min-width: 680px;
+  .play-btn {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+  }
+}
+
 .home-icon {
   position: fixed;
   top: var(--y-padding);
